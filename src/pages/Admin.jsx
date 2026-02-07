@@ -1,82 +1,88 @@
 import { useState, useEffect } from 'react';
 import {
-    LayoutDashboard,
-    FileText,
-    TrendingUp,
-    Users,
-    Clock,
-    Activity,
-    RefreshCw,
-    Trash2,
-    Eye
+    Lock, LogOut, Users, UserCheck, Clock, Trash2,
+    CheckCircle, XCircle, Shield, Eye, EyeOff,
+    CreditCard, Phone, User, Calendar
 } from 'lucide-react';
-import { apiKeyService } from '../services/apiKeyService';
+import {
+    isAdmin,
+    loginAdmin,
+    logoutAdmin,
+    validateAdminCredentials,
+    getPendingRegistrations,
+    getActivatedRegistrations,
+    activateUser,
+    rejectUser,
+    deactivateUser,
+    BANK_INFO
+} from '../services/authService';
 import './Admin.css';
 
-// Get submissions from localStorage
-const getSubmissions = () => {
-    try {
-        const data = localStorage.getItem('ielts_submissions');
-        return data ? JSON.parse(data) : [];
-    } catch {
-        return [];
-    }
-};
-
-// Clear all submissions
-const clearSubmissions = () => {
-    localStorage.removeItem('ielts_submissions');
-};
-
-function Admin() {
-    const [submissions, setSubmissions] = useState([]);
-    const [stats, setStats] = useState({
-        total: 0,
-        today: 0,
-        avgBand: 0,
-        modelUsed: ''
-    });
-    const [isClearing, setIsClearing] = useState(false);
+const Admin = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [loginError, setLoginError] = useState('');
+    const [pendingUsers, setPendingUsers] = useState([]);
+    const [activatedUsers, setActivatedUsers] = useState([]);
+    const [activeTab, setActiveTab] = useState('pending');
 
     useEffect(() => {
-        loadData();
+        setIsLoggedIn(isAdmin());
     }, []);
 
-    const loadData = () => {
-        const allSubmissions = getSubmissions();
-        setSubmissions(allSubmissions);
+    useEffect(() => {
+        if (isLoggedIn) {
+            loadUsers();
+        }
+    }, [isLoggedIn]);
 
-        // Calculate stats
-        const today = new Date().toDateString();
-        const todaySubmissions = allSubmissions.filter(s =>
-            new Date(s.timestamp).toDateString() === today
-        );
-
-        const avgBand = allSubmissions.length > 0
-            ? (allSubmissions.reduce((sum, s) => sum + (s.evaluation?.overallBand || 0), 0) / allSubmissions.length).toFixed(1)
-            : 0;
-
-        setStats({
-            total: allSubmissions.length,
-            today: todaySubmissions.length,
-            avgBand,
-            modelUsed: apiKeyService.getSelectedModel()
-        });
+    const loadUsers = () => {
+        setPendingUsers(getPendingRegistrations());
+        setActivatedUsers(getActivatedRegistrations());
     };
 
-    const handleClearData = () => {
-        if (window.confirm('Xác nhận xóa toàn bộ dữ liệu? Hành động này không thể hoàn tác.')) {
-            setIsClearing(true);
-            setTimeout(() => {
-                clearSubmissions();
-                loadData();
-                setIsClearing(false);
-            }, 500);
+    const handleLogin = (e) => {
+        e.preventDefault();
+        setLoginError('');
+
+        if (validateAdminCredentials(username, password)) {
+            loginAdmin();
+            setIsLoggedIn(true);
+            setUsername('');
+            setPassword('');
+        } else {
+            setLoginError('Tên đăng nhập hoặc mật khẩu không đúng');
         }
     };
 
-    const formatDate = (timestamp) => {
-        const date = new Date(timestamp);
+    const handleLogout = () => {
+        logoutAdmin();
+        setIsLoggedIn(false);
+    };
+
+    const handleActivate = (phone) => {
+        activateUser(phone);
+        loadUsers();
+    };
+
+    const handleReject = (phone) => {
+        if (window.confirm('Bạn có chắc muốn từ chối đăng ký này?')) {
+            rejectUser(phone);
+            loadUsers();
+        }
+    };
+
+    const handleDeactivate = (phone) => {
+        if (window.confirm('Bạn có chắc muốn hủy kích hoạt người dùng này?')) {
+            deactivateUser(phone);
+            loadUsers();
+        }
+    };
+
+    const formatDate = (isoString) => {
+        const date = new Date(isoString);
         return date.toLocaleDateString('vi-VN', {
             day: '2-digit',
             month: '2-digit',
@@ -86,155 +92,263 @@ function Admin() {
         });
     };
 
+    // Login Form
+    if (!isLoggedIn) {
+        return (
+            <div className="admin-page">
+                <div className="login-container">
+                    <div className="login-card">
+                        <div className="login-header">
+                            <div className="login-icon">
+                                <Shield size={32} />
+                            </div>
+                            <h1>Admin Dashboard</h1>
+                            <p>Đăng nhập để quản lý hệ thống</p>
+                        </div>
+
+                        <form onSubmit={handleLogin} className="login-form">
+                            <div className="form-group">
+                                <label>
+                                    <User size={16} />
+                                    Tên đăng nhập
+                                </label>
+                                <input
+                                    type="text"
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}
+                                    placeholder="admin"
+                                    autoFocus
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label>
+                                    <Lock size={16} />
+                                    Mật khẩu
+                                </label>
+                                <div className="password-input">
+                                    <input
+                                        type={showPassword ? 'text' : 'password'}
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        placeholder="••••••"
+                                    />
+                                    <button
+                                        type="button"
+                                        className="toggle-password"
+                                        onClick={() => setShowPassword(!showPassword)}
+                                    >
+                                        {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                                    </button>
+                                </div>
+                            </div>
+
+                            {loginError && (
+                                <div className="login-error">
+                                    <XCircle size={16} />
+                                    {loginError}
+                                </div>
+                            )}
+
+                            <button type="submit" className="login-btn">
+                                <Lock size={18} />
+                                Đăng nhập
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    // Admin Dashboard
     return (
         <div className="admin-page">
-            <div className="admin-header">
-                <div className="admin-title">
-                    <LayoutDashboard size={28} />
-                    <h1>Admin Dashboard</h1>
-                </div>
-                <div className="admin-actions">
-                    <button className="btn-refresh" onClick={loadData}>
-                        <RefreshCw size={18} />
-                        <span>Làm mới</span>
+            <div className="admin-container">
+                {/* Header */}
+                <header className="admin-header">
+                    <div className="header-left">
+                        <Shield size={24} />
+                        <h1>Admin Dashboard</h1>
+                    </div>
+                    <button className="logout-btn" onClick={handleLogout}>
+                        <LogOut size={18} />
+                        Đăng xuất
                     </button>
-                    <button className="btn-clear" onClick={handleClearData} disabled={isClearing}>
-                        <Trash2 size={18} />
-                        <span>{isClearing ? 'Đang xóa...' : 'Xóa dữ liệu'}</span>
+                </header>
+
+                {/* Stats */}
+                <div className="stats-grid">
+                    <div className="stat-card pending">
+                        <div className="stat-icon">
+                            <Clock size={24} />
+                        </div>
+                        <div className="stat-info">
+                            <span className="stat-value">{pendingUsers.length}</span>
+                            <span className="stat-label">Chờ duyệt</span>
+                        </div>
+                    </div>
+                    <div className="stat-card active">
+                        <div className="stat-icon">
+                            <UserCheck size={24} />
+                        </div>
+                        <div className="stat-info">
+                            <span className="stat-value">{activatedUsers.length}</span>
+                            <span className="stat-label">Đã kích hoạt</span>
+                        </div>
+                    </div>
+                    <div className="stat-card total">
+                        <div className="stat-icon">
+                            <Users size={24} />
+                        </div>
+                        <div className="stat-info">
+                            <span className="stat-value">{pendingUsers.length + activatedUsers.length}</span>
+                            <span className="stat-label">Tổng đăng ký</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Bank Info Card */}
+                <div className="bank-info-card">
+                    <div className="bank-card-header">
+                        <CreditCard size={20} />
+                        <h3>Thông tin nhận thanh toán</h3>
+                    </div>
+                    <div className="bank-card-content">
+                        <div className="bank-qr">
+                            <img src={BANK_INFO.qrUrl} alt="QR Code" />
+                        </div>
+                        <div className="bank-details-admin">
+                            <div className="detail-row">
+                                <span>Ngân hàng:</span>
+                                <strong>{BANK_INFO.bankName}</strong>
+                            </div>
+                            <div className="detail-row">
+                                <span>Số TK:</span>
+                                <strong className="account">{BANK_INFO.accountNumber}</strong>
+                            </div>
+                            <div className="detail-row">
+                                <span>Chủ TK:</span>
+                                <strong>{BANK_INFO.accountHolder}</strong>
+                            </div>
+                            <div className="detail-row highlight">
+                                <span>Phí:</span>
+                                <strong className="amount">{BANK_INFO.amount}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Tabs */}
+                <div className="admin-tabs">
+                    <button
+                        className={`tab-btn ${activeTab === 'pending' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('pending')}
+                    >
+                        <Clock size={16} />
+                        Chờ duyệt ({pendingUsers.length})
+                    </button>
+                    <button
+                        className={`tab-btn ${activeTab === 'activated' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('activated')}
+                    >
+                        <UserCheck size={16} />
+                        Đã kích hoạt ({activatedUsers.length})
                     </button>
                 </div>
-            </div>
 
-            {/* Stats Cards */}
-            <div className="stats-grid">
-                <div className="stat-card gradient-1">
-                    <div className="stat-icon">
-                        <FileText size={24} />
-                    </div>
-                    <div className="stat-content">
-                        <span className="stat-value">{stats.total}</span>
-                        <span className="stat-label">Tổng bài đã chấm</span>
-                    </div>
-                </div>
+                {/* User Tables */}
+                <div className="users-section">
+                    {activeTab === 'pending' && (
+                        <div className="users-table-container">
+                            {pendingUsers.length === 0 ? (
+                                <div className="empty-state">
+                                    <Clock size={48} />
+                                    <p>Không có đăng ký nào đang chờ duyệt</p>
+                                </div>
+                            ) : (
+                                <table className="users-table">
+                                    <thead>
+                                        <tr>
+                                            <th><User size={14} /> Họ tên</th>
+                                            <th><Phone size={14} /> SĐT</th>
+                                            <th><Calendar size={14} /> Ngày ĐK</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {pendingUsers.map((user) => (
+                                            <tr key={user.phone}>
+                                                <td className="name-cell">{user.fullName}</td>
+                                                <td className="phone-cell">{user.phone}</td>
+                                                <td className="date-cell">{formatDate(user.registeredAt)}</td>
+                                                <td className="actions-cell">
+                                                    <button
+                                                        className="action-btn approve"
+                                                        onClick={() => handleActivate(user.phone)}
+                                                        title="Duyệt"
+                                                    >
+                                                        <CheckCircle size={18} />
+                                                    </button>
+                                                    <button
+                                                        className="action-btn reject"
+                                                        onClick={() => handleReject(user.phone)}
+                                                        title="Từ chối"
+                                                    >
+                                                        <XCircle size={18} />
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            )}
+                        </div>
+                    )}
 
-                <div className="stat-card gradient-2">
-                    <div className="stat-icon">
-                        <Clock size={24} />
-                    </div>
-                    <div className="stat-content">
-                        <span className="stat-value">{stats.today}</span>
-                        <span className="stat-label">Submissions hôm nay</span>
-                    </div>
-                </div>
-
-                <div className="stat-card gradient-3">
-                    <div className="stat-icon">
-                        <TrendingUp size={24} />
-                    </div>
-                    <div className="stat-content">
-                        <span className="stat-value">{stats.avgBand}</span>
-                        <span className="stat-label">Điểm trung bình</span>
-                    </div>
-                </div>
-
-                <div className="stat-card gradient-4">
-                    <div className="stat-icon">
-                        <Activity size={24} />
-                    </div>
-                    <div className="stat-content">
-                        <span className="stat-value truncate">{stats.modelUsed.split('-').pop()}</span>
-                        <span className="stat-label">Model đang dùng</span>
-                    </div>
-                </div>
-            </div>
-
-            {/* Recent Submissions Table */}
-            <div className="table-container glass-card">
-                <div className="table-header">
-                    <h2>Lịch sử Submissions</h2>
-                    <span className="table-count">{submissions.length} bài</span>
-                </div>
-
-                {submissions.length > 0 ? (
-                    <div className="table-wrapper">
-                        <table className="admin-table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Task Type</th>
-                                    <th>Word Count</th>
-                                    <th>Overall Band</th>
-                                    <th>TA</th>
-                                    <th>CC</th>
-                                    <th>LR</th>
-                                    <th>GR</th>
-                                    <th>Thời gian</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {submissions.slice().reverse().map((sub, index) => (
-                                    <tr key={sub.id || index}>
-                                        <td className="td-id">{submissions.length - index}</td>
-                                        <td>
-                                            <span className={`task-badge ${sub.taskType}`}>
-                                                {sub.taskType?.toUpperCase() || 'N/A'}
-                                            </span>
-                                        </td>
-                                        <td>{sub.wordCount || '-'}</td>
-                                        <td>
-                                            <span className={`band-score band-${Math.floor(sub.evaluation?.overallBand || 0)}`}>
-                                                {sub.evaluation?.overallBand || '-'}
-                                            </span>
-                                        </td>
-                                        <td>{sub.evaluation?.taskAchievement?.band || '-'}</td>
-                                        <td>{sub.evaluation?.coherenceCohesion?.band || '-'}</td>
-                                        <td>{sub.evaluation?.lexicalResource?.band || '-'}</td>
-                                        <td>{sub.evaluation?.grammaticalRange?.band || '-'}</td>
-                                        <td className="td-date">{formatDate(sub.timestamp)}</td>
-                                        <td>
-                                            <button className="btn-icon" title="Xem chi tiết">
-                                                <Eye size={16} />
-                                            </button>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                ) : (
-                    <div className="empty-state">
-                        <FileText size={48} />
-                        <p>Chưa có submission nào</p>
-                        <span>Các bài essay được chấm sẽ hiển thị tại đây</span>
-                    </div>
-                )}
-            </div>
-
-            {/* API Status */}
-            <div className="api-status glass-card">
-                <h3>API Configuration</h3>
-                <div className="api-info-grid">
-                    <div className="api-info-item">
-                        <span className="api-label">API Key Status</span>
-                        <span className={`api-value ${apiKeyService.hasApiKey() ? 'success' : 'error'}`}>
-                            {apiKeyService.hasApiKey() ? '✓ Configured' : '✗ Not Set'}
-                        </span>
-                    </div>
-                    <div className="api-info-item">
-                        <span className="api-label">Selected Model</span>
-                        <span className="api-value">{apiKeyService.getSelectedModel()}</span>
-                    </div>
-                    <div className="api-info-item">
-                        <span className="api-label">Storage Used</span>
-                        <span className="api-value">
-                            {(JSON.stringify(localStorage).length / 1024).toFixed(1)} KB
-                        </span>
-                    </div>
+                    {activeTab === 'activated' && (
+                        <div className="users-table-container">
+                            {activatedUsers.length === 0 ? (
+                                <div className="empty-state">
+                                    <UserCheck size={48} />
+                                    <p>Chưa có người dùng nào được kích hoạt</p>
+                                </div>
+                            ) : (
+                                <table className="users-table">
+                                    <thead>
+                                        <tr>
+                                            <th><User size={14} /> Họ tên</th>
+                                            <th><Phone size={14} /> SĐT</th>
+                                            <th><Calendar size={14} /> Ngày ĐK</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {activatedUsers.map((user) => (
+                                            <tr key={user.phone}>
+                                                <td className="name-cell">{user.fullName}</td>
+                                                <td className="phone-cell">{user.phone}</td>
+                                                <td className="date-cell">{formatDate(user.registeredAt)}</td>
+                                                <td className="actions-cell">
+                                                    <button
+                                                        className="action-btn deactivate"
+                                                        onClick={() => handleDeactivate(user.phone)}
+                                                        title="Hủy kích hoạt"
+                                                    >
+                                                        <Trash2 size={18} />
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Admin;

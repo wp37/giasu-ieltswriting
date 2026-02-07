@@ -1,0 +1,380 @@
+/* =====================================================
+   REGISTRATION MODAL - PREMIUM STYLING
+   ===================================================== */
+
+.registration-modal {
+    background: var(--bg-elevated);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: scaleIn 0.3s ease;
+}
+
+/* Close Button */
+.registration-modal .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all var(--transition-fast);
+    z-index: 10;
+}
+
+.registration-modal .close-button:hover {
+    background: var(--glass-bg-hover);
+    color: var(--text-primary);
+}
+
+/* Modal Step */
+.modal-step {
+    padding: 2rem;
+}
+
+.step-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+}
+
+.gradient-bg {
+    background: var(--gradient-primary);
+}
+
+.step-header h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.step-header p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Registration Form */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.form-group input {
+    padding: 0.875rem 1rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.form-group input::placeholder {
+    color: var(--text-muted);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Error Box */
+.error-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--error-bg);
+    color: var(--error);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+}
+
+/* Payment Info */
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.qr-section {
+    text-align: center;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    border-radius: var(--radius-lg);
+    background: white;
+    padding: 0.5rem;
+}
+
+.qr-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Bank Details */
+.bank-details {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+}
+
+.bank-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.bank-row:last-child {
+    border-bottom: none;
+}
+
+.bank-row.highlight {
+    background: rgba(99, 102, 241, 0.1);
+    margin: 0.5rem -1rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border-bottom: none;
+}
+
+.bank-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.bank-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.bank-value.account-number {
+    font-family: 'Monaco', 'Consolas', monospace;
+    letter-spacing: 0.05em;
+    color: var(--primary-400);
+}
+
+.bank-value.amount {
+    color: var(--success);
+    font-size: 1.1rem;
+}
+
+/* Payment Note */
+.payment-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    color: var(--warning);
+    margin-top: 1rem;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.button-group .btn-secondary,
+.button-group .btn-primary {
+    flex: 1;
+    padding: 0.875rem;
+    font-size: 0.9rem;
+}
+
+.modal-step .btn-primary {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.875rem;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.modal-step .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.modal-step .btn-secondary {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.modal-step .btn-secondary:hover {
+    background: var(--glass-bg-hover);
+    color: var(--text-primary);
+}
+
+/* Success Step */
+.success-step {
+    text-align: center;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--success-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--success);
+    animation: scaleIn 0.3s ease;
+}
+
+.success-step h2 {
+    color: var(--success);
+    margin-bottom: 0.75rem;
+}
+
+.success-step p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.user-info-summary {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.user-info-summary div {
+    padding: 0.25rem 0;
+    color: var(--text-secondary);
+}
+
+.user-info-summary strong {
+    color: var(--text-primary);
+}
+
+/* Step Progress */
+.step-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.progress-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all var(--transition-fast);
+}
+
+.progress-dot.active {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+}
+
+.progress-line {
+    width: 40px;
+    height: 2px;
+    background: var(--glass-border);
+    transition: all var(--transition-fast);
+}
+
+.progress-line.active {
+    background: var(--primary-500);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .registration-modal {
+        margin: 0.5rem;
+        max-height: calc(100vh - 1rem);
+    }
+
+    .modal-step {
+        padding: 1.5rem;
+    }
+
+    .qr-code {
+        width: 160px;
+        height: 160px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
