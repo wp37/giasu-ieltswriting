@@ -1,0 +1,257 @@
+{
+  "categories": [
+    {
+      "id": "increase",
+      "name": {
+        "en": "Increase / Upward Trend",
+        "vi": "Tăng"
+      },
+      "verbs": {
+        "basic": ["increased", "rose", "grew", "climbed", "went up"],
+        "advanced": [
+          {
+            "word": "surged",
+            "meaning": "Increased suddenly and dramatically",
+            "example": "Sales surged by 50% in December."
+          },
+          {
+            "word": "rocketed",
+            "meaning": "Increased very quickly to a high level",
+            "example": "Prices rocketed from $10 to $100."
+          },
+          {
+            "word": "soared",
+            "meaning": "Rose quickly to a high level",
+            "example": "The population soared to 10 million."
+          },
+          {
+            "word": "leaped",
+            "meaning": "Jumped suddenly",
+            "example": "Exports leaped by 30%."
+          },
+          {
+            "word": "escalated",
+            "meaning": "Increased rapidly (often for costs/problems)",
+            "example": "Costs escalated beyond initial estimates."
+          },
+          {
+            "word": "doubled/tripled",
+            "meaning": "Became 2x/3x larger",
+            "example": "The figure doubled over the decade."
+          }
+        ]
+      },
+      "nouns": ["an increase", "a rise", "a growth", "an upward trend", "a surge", "a leap"]
+    },
+    {
+      "id": "decrease",
+      "name": {
+        "en": "Decrease / Downward Trend",
+        "vi": "Giảm"
+      },
+      "verbs": {
+        "basic": ["decreased", "fell", "dropped", "declined", "went down"],
+        "advanced": [
+          {
+            "word": "plummeted",
+            "meaning": "Fell quickly and dramatically",
+            "example": "Share prices plummeted overnight."
+          },
+          {
+            "word": "plunged",
+            "meaning": "Dropped suddenly and steeply",
+            "example": "Temperature plunged to -20°C."
+          },
+          {
+            "word": "slumped",
+            "meaning": "Fell suddenly and significantly",
+            "example": "Sales slumped during the recession."
+          },
+          {
+            "word": "collapsed",
+            "meaning": "Fell completely/dramatically",
+            "example": "The market collapsed in 2008."
+          },
+          {
+            "word": "dwindled",
+            "meaning": "Decreased gradually over time",
+            "example": "Resources dwindled to almost nothing."
+          },
+          {
+            "word": "halved",
+            "meaning": "Reduced by 50%",
+            "example": "Production halved within a year."
+          }
+        ]
+      },
+      "nouns": ["a decrease", "a fall", "a drop", "a decline", "a downward trend", "a slump", "a plunge"]
+    },
+    {
+      "id": "stable",
+      "name": {
+        "en": "Stable / No Change",
+        "vi": "Ổn định"
+      },
+      "verbs": {
+        "basic": ["stayed the same", "remained constant", "stabilized"],
+        "advanced": [
+          {
+            "word": "leveled off",
+            "meaning": "Stopped changing after period of increase/decrease",
+            "example": "Growth leveled off at around 5%."
+          },
+          {
+            "word": "plateaued",
+            "meaning": "Reached a stable level after rising",
+            "example": "Sales plateaued at $1 million."
+          },
+          {
+            "word": "remained static",
+            "meaning": "Did not change",
+            "example": "The rate remained static throughout the year."
+          },
+          {
+            "word": "stagnated",
+            "meaning": "Stopped growing (often negative connotation)",
+            "example": "Economic growth stagnated for three years."
+          },
+          {
+            "word": "held steady",
+            "meaning": "Maintained the same level",
+            "example": "Prices held steady at $50."
+          }
+        ]
+      },
+      "nouns": ["a period of stability", "a plateau", "stagnation"]
+    },
+    {
+      "id": "fluctuation",
+      "name": {
+        "en": "Fluctuation / Variation",
+        "vi": "Dao động"
+      },
+      "verbs": {
+        "basic": ["fluctuated", "varied", "changed"],
+        "advanced": [
+          {
+            "word": "oscillated",
+            "meaning": "Moved back and forth between values",
+            "example": "The rate oscillated between 5% and 8%."
+          },
+          {
+            "word": "showed volatility",
+            "meaning": "Changed unpredictably and frequently",
+            "example": "The market showed significant volatility."
+          },
+          {
+            "word": "experienced erratic changes",
+            "meaning": "Changed irregularly",
+            "example": "Prices experienced erratic changes throughout."
+          }
+        ]
+      },
+      "nouns": ["a fluctuation", "a variation", "volatility", "erratic movement"]
+    },
+    {
+      "id": "peak",
+      "name": {
+        "en": "Peak / Highest Point",
+        "vi": "Đạt đỉnh"
+      },
+      "verbs": {
+        "basic": ["peaked at", "reached a high of"],
+        "advanced": [
+          {
+            "word": "reached a peak of",
+            "meaning": "Got to the highest point",
+            "example": "Sales reached a peak of $5 million."
+          },
+          {
+            "word": "hit an all-time high of",
+            "meaning": "Reached the highest ever recorded",
+            "example": "Prices hit an all-time high of $200."
+          },
+          {
+            "word": "culminated at",
+            "meaning": "Ended at the highest point",
+            "example": "The growth culminated at 15% in December."
+          }
+        ]
+      },
+      "nouns": ["a peak", "the highest point", "a maximum", "an all-time high"]
+    },
+    {
+      "id": "trough",
+      "name": {
+        "en": "Trough / Lowest Point",
+        "vi": "Chạm đáy"
+      },
+      "verbs": {
+        "basic": ["fell to a low of", "reached the lowest point"],
+        "advanced": [
+          {
+            "word": "hit a trough",
+            "meaning": "Reached the lowest point",
+            "example": "The index hit a trough in March."
+          },
+          {
+            "word": "bottomed out",
+            "meaning": "Reached the lowest point before recovering",
+            "example": "Prices bottomed out at $10 before recovering."
+          },
+          {
+            "word": "hit rock bottom",
+            "meaning": "Reached the absolute lowest point",
+            "example": "Consumer confidence hit rock bottom."
+          }
+        ]
+      },
+      "nouns": ["a trough", "the lowest point", "a minimum", "rock bottom"]
+    }
+  ],
+  "adverbs": {
+    "strong": [
+      {"word": "dramatically", "meaning": "Very significantly"},
+      {"word": "sharply", "meaning": "Quickly and steeply"},
+      {"word": "significantly", "meaning": "By a large amount"},
+      {"word": "substantially", "meaning": "By a considerable amount"},
+      {"word": "rapidly", "meaning": "Very quickly"},
+      {"word": "precipitously", "meaning": "Very steeply (formal)"},
+      {"word": "considerably", "meaning": "By a noticeable amount"},
+      {"word": "markedly", "meaning": "Noticeably"}
+    ],
+    "mild": [
+      {"word": "moderately", "meaning": "By a medium amount"},
+      {"word": "gradually", "meaning": "Slowly over time"},
+      {"word": "slightly", "meaning": "By a small amount"},
+      {"word": "marginally", "meaning": "By a very small amount"},
+      {"word": "steadily", "meaning": "At a constant rate"},
+      {"word": "gently", "meaning": "Slowly and smoothly"}
+    ],
+    "minimal": [
+      {"word": "negligibly", "meaning": "By an insignificant amount"},
+      {"word": "minimally", "meaning": "By a tiny amount"},
+      {"word": "fractionally", "meaning": "By a very small fraction"}
+    ]
+  },
+  "timeExpressions": [
+    "over the period",
+    "throughout the period shown",
+    "during this period",
+    "between [year] and [year]",
+    "from [year] to [year]",
+    "in the first/second half of the year",
+    "at the beginning/end of the period",
+    "by the end of [year]"
+  ],
+  "approximations": [
+    "approximately",
+    "around",
+    "roughly",
+    "just under",
+    "just over",
+    "nearly",
+    "almost",
+    "about"
+  ]
+}

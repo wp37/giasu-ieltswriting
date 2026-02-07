@@ -1,0 +1,251 @@
+.practice-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.practice-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.test-type-selector, .task-type-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.type-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  background: var(--card-bg, #fff);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.type-btn:hover {
+  background: var(--bg-secondary, #f8fafc);
+}
+
+.type-btn.active {
+  background: var(--primary-color, #2563eb);
+  color: white;
+  border-color: var(--primary-color, #2563eb);
+}
+
+.timer-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary, #f8fafc);
+  border-radius: 10px;
+}
+
+.timer-display {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: monospace;
+  min-width: 80px;
+}
+
+.timer-display.time-up {
+  color: #dc2626;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.timer-controls {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.timer-btn {
+  padding: 0.35rem;
+  border: none;
+  background: var(--card-bg, #fff);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.timer-btn:hover {
+  background: #e2e8f0;
+}
+
+.writing-area {
+  display: flex;
+  gap: 1rem;
+}
+
+.editor-section {
+  flex: 1;
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.editor-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary, #333);
+}
+
+.word-count {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  background: var(--bg-secondary, #f8fafc);
+}
+
+.word-count.good {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.word-count.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.word-count.low {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.min-words {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #888);
+  margin-left: 0.5rem;
+}
+
+.essay-editor {
+  width: 100%;
+  min-height: 400px;
+  padding: 1rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.7;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.essay-editor:focus {
+  outline: none;
+  border-color: var(--primary-color, #2563eb);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.error-message {
+  padding: 0.75rem 1rem;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.primary {
+  background: var(--primary-color, #2563eb);
+  color: white;
+}
+
+.action-btn.primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.action-btn.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.action-btn.secondary {
+  background: var(--bg-secondary, #f1f5f9);
+  color: var(--text-primary, #333);
+}
+
+.action-btn.secondary:hover {
+  background: #e2e8f0;
+}
+
+.action-btn.danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.action-btn.danger:hover {
+  background: #fecaca;
+}
+
+.action-btn.toggle {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.action-btn.toggle:hover {
+  background: #fde68a;
+}
+
+@media (max-width: 1024px) {
+  .writing-area {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .practice-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .timer-section {
+    justify-content: center;
+  }
+}

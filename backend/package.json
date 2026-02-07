@@ -1,0 +1,22 @@
+{
+  "name": "ielts-writing-tool-api",
+  "version": "1.0.0",
+  "description": "IELTS Writing Tool Backend API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "mammoth": "^1.11.0",
+    "multer": "^2.0.2",
+    "openai": "^6.18.0",
+    "pdf-parse": "^2.4.5"
+  }
+}

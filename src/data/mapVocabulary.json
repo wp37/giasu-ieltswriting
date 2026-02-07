@@ -1,0 +1,111 @@
+{
+  "transformationVerbs": {
+    "expand": {
+      "name": { "en": "Expansion", "vi": "Mở rộng" },
+      "words": [
+        {"word": "enlarged", "example": "The park was enlarged to twice its original size."},
+        {"word": "expanded", "example": "The shopping area expanded northward."},
+        {"word": "extended", "example": "The railway line was extended to the suburbs."},
+        {"word": "widened", "example": "The road was widened to accommodate more traffic."}
+      ]
+    },
+    "demolish": {
+      "name": { "en": "Demolition", "vi": "Phá bỏ" },
+      "words": [
+        {"word": "demolished", "example": "The old factory was demolished."},
+        {"word": "knocked down", "example": "Several houses were knocked down."},
+        {"word": "flattened", "example": "The wasteland was flattened for construction."},
+        {"word": "removed", "example": "The playground was removed."},
+        {"word": "cleared", "example": "The forest area was cleared for development."},
+        {"word": "razed", "example": "The historic building was razed to the ground."}
+      ]
+    },
+    "build": {
+      "name": { "en": "Construction", "vi": "Xây mới" },
+      "words": [
+        {"word": "constructed", "example": "A new bridge was constructed across the river."},
+        {"word": "erected", "example": "A statue was erected in the town center."},
+        {"word": "built", "example": "New apartments were built on the site."},
+        {"word": "introduced", "example": "A pedestrian zone was introduced."},
+        {"word": "added", "example": "A car park was added to the north."},
+        {"word": "established", "example": "A new school was established in the area."}
+      ]
+    },
+    "convert": {
+      "name": { "en": "Conversion", "vi": "Chuyển đổi" },
+      "words": [
+        {"word": "converted into", "example": "The factory was converted into an art gallery."},
+        {"word": "transformed into", "example": "The wasteland was transformed into a park."},
+        {"word": "renovated", "example": "The old building was renovated."},
+        {"word": "modernized", "example": "The station was modernized."},
+        {"word": "repurposed", "example": "The warehouse was repurposed as a theater."},
+        {"word": "turned into", "example": "The farmland was turned into a housing estate."}
+      ]
+    },
+    "relocate": {
+      "name": { "en": "Relocation", "vi": "Di dời" },
+      "words": [
+        {"word": "relocated", "example": "The market was relocated to the outskirts."},
+        {"word": "moved", "example": "The bus station was moved to a new location."},
+        {"word": "transferred", "example": "Operations were transferred to the new site."}
+      ]
+    },
+    "trees": {
+      "name": { "en": "Vegetation Changes", "vi": "Thay đổi cây cối" },
+      "words": [
+        {"word": "chopped down", "example": "Trees were chopped down to make way for roads."},
+        {"word": "uprooted", "example": "The trees were uprooted during construction."},
+        {"word": "planted", "example": "New trees were planted along the avenue."},
+        {"word": "cleared", "example": "The woodland was cleared for development."}
+      ]
+    }
+  },
+  "locationPrepositions": {
+    "directions": [
+      {"phrase": "to the north of", "usage": "Outside and above the reference point"},
+      {"phrase": "to the south of", "usage": "Outside and below the reference point"},
+      {"phrase": "to the east of", "usage": "Outside and right of the reference point"},
+      {"phrase": "to the west of", "usage": "Outside and left of the reference point"},
+      {"phrase": "in the north of", "usage": "Inside the northern part"},
+      {"phrase": "in the northeast corner of", "usage": "Inside, at the top-right corner"},
+      {"phrase": "in the southwest of", "usage": "Inside the bottom-left area"}
+    ],
+    "proximity": [
+      {"phrase": "adjacent to", "usage": "Right next to, sharing a border"},
+      {"phrase": "next to", "usage": "Beside"},
+      {"phrase": "near", "usage": "Close by"},
+      {"phrase": "in close proximity to", "usage": "Very near to"},
+      {"phrase": "in the vicinity of", "usage": "In the surrounding area of"},
+      {"phrase": "surrounding", "usage": "All around"}
+    ],
+    "relative": [
+      {"phrase": "across from", "usage": "On the opposite side"},
+      {"phrase": "opposite", "usage": "Directly facing"},
+      {"phrase": "running parallel to", "usage": "Going in the same direction alongside"},
+      {"phrase": "perpendicular to", "usage": "At a 90-degree angle to"},
+      {"phrase": "along", "usage": "Following the length of"},
+      {"phrase": "through the center of", "usage": "Passing through the middle"}
+    ],
+    "other": [
+      {"phrase": "on the outskirts of", "usage": "At the outer edges"},
+      {"phrase": "in the heart of", "usage": "In the central area"},
+      {"phrase": "at the intersection of", "usage": "Where two things meet"},
+      {"phrase": "on the banks of", "usage": "Along the sides of a river"},
+      {"phrase": "at the foot of", "usage": "At the bottom of a hill/mountain"}
+    ]
+  },
+  "overviewPhrases": [
+    "The maps illustrate how [place] changed between [year] and [year].",
+    "Overall, the area underwent significant development.",
+    "The most striking change is the transformation of [feature].",
+    "It is clear that the area became more urbanized/developed.",
+    "The maps show that [place] was transformed from [description] to [description]."
+  ],
+  "comparisonPhrases": [
+    "In [year], there was [feature], but by [year], this had been replaced by [feature].",
+    "While [feature] existed in [year], it was no longer present by [year].",
+    "The area where [feature] once stood is now occupied by [feature].",
+    "By [year], [place] had been completely transformed.",
+    "[Feature] remained unchanged throughout the period."
+  ]
+}

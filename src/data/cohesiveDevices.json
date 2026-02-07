@@ -1,0 +1,346 @@
+{
+  "categories": [
+    {
+      "id": "addition",
+      "name": {
+        "en": "Addition",
+        "vi": "Bổ sung"
+      },
+      "description": {
+        "en": "Used to add a new point or expand on the previous idea",
+        "vi": "Dùng để thêm một luận điểm mới hoặc mở rộng ý vừa nêu"
+      },
+      "basic": ["And", "Also", "Too", "Besides"],
+      "advanced": [
+        {
+          "word": "Furthermore",
+          "usage": "Start of sentence, formal",
+          "example": "Furthermore, the data reveals a significant increase."
+        },
+        {
+          "word": "Moreover",
+          "usage": "Start of sentence, formal",
+          "example": "Moreover, this trend is expected to continue."
+        },
+        {
+          "word": "Additionally",
+          "usage": "Start of sentence",
+          "example": "Additionally, there are environmental concerns."
+        },
+        {
+          "word": "In addition to this",
+          "usage": "Start of sentence",
+          "example": "In addition to this, the costs have risen."
+        },
+        {
+          "word": "Likewise",
+          "usage": "When comparing similarities",
+          "example": "Japan saw growth. Likewise, Korea experienced expansion."
+        },
+        {
+          "word": "Similarly",
+          "usage": "When comparing similarities",
+          "example": "Similarly, the urban population increased."
+        }
+      ]
+    },
+    {
+      "id": "contrast",
+      "name": {
+        "en": "Contrast",
+        "vi": "Tương phản"
+      },
+      "description": {
+        "en": "Used for comparing differences or presenting opposing ideas",
+        "vi": "Dùng để so sánh sự khác biệt hoặc phản biện"
+      },
+      "basic": ["But", "However"],
+      "advanced": [
+        {
+          "word": "Conversely",
+          "usage": "Complete opposite situation",
+          "example": "Conversely, rural areas saw a decline."
+        },
+        {
+          "word": "In stark contrast",
+          "usage": "Strong difference emphasis",
+          "example": "In stark contrast, the second group showed no improvement."
+        },
+        {
+          "word": "On the contrary",
+          "usage": "Contradicting previous statement",
+          "example": "On the contrary, the evidence suggests otherwise."
+        },
+        {
+          "word": "Nevertheless",
+          "usage": "Despite what was just said",
+          "example": "Nevertheless, the project was completed on time."
+        },
+        {
+          "word": "Notwithstanding",
+          "usage": "Formal, despite",
+          "example": "Notwithstanding these challenges, progress was made."
+        },
+        {
+          "word": "Whereas",
+          "usage": "Direct comparison in same sentence",
+          "example": "Men preferred sports, whereas women chose reading."
+        },
+        {
+          "word": "While",
+          "usage": "Direct comparison",
+          "example": "While A increased, B remained stable."
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "name": {
+        "en": "Result/Consequence",
+        "vi": "Kết quả"
+      },
+      "description": {
+        "en": "Used to show cause and effect relationships",
+        "vi": "Dùng để chỉ mối quan hệ nhân quả"
+      },
+      "basic": ["So", "Because of this"],
+      "advanced": [
+        {
+          "word": "Consequently",
+          "usage": "As a result of what was mentioned",
+          "example": "Consequently, many businesses closed down."
+        },
+        {
+          "word": "As a result",
+          "usage": "Showing outcome",
+          "example": "As a result, unemployment rates increased."
+        },
+        {
+          "word": "Hence",
+          "usage": "Formal, therefore",
+          "example": "Hence, new policies were implemented."
+        },
+        {
+          "word": "Thus",
+          "usage": "Formal conclusion",
+          "example": "Thus, the hypothesis was proven correct."
+        },
+        {
+          "word": "Therefore",
+          "usage": "Logical conclusion",
+          "example": "Therefore, immediate action is required."
+        },
+        {
+          "word": "Thereby",
+          "usage": "Followed by V-ing",
+          "example": "Prices rose, thereby reducing demand."
+        }
+      ]
+    },
+    {
+      "id": "exemplification",
+      "name": {
+        "en": "Exemplification",
+        "vi": "Ví dụ"
+      },
+      "description": {
+        "en": "Used to provide examples to support your point",
+        "vi": "Dùng để đưa ví dụ minh họa cho luận điểm"
+      },
+      "basic": ["For example", "Like"],
+      "advanced": [
+        {
+          "word": "For instance",
+          "usage": "Introducing an example",
+          "example": "For instance, China's economy grew by 8%."
+        },
+        {
+          "word": "To illustrate",
+          "usage": "Providing illustration",
+          "example": "To illustrate, consider the case of Japan."
+        },
+        {
+          "word": "A prime example of this is",
+          "usage": "Highlighting key example",
+          "example": "A prime example of this is the 2008 financial crisis."
+        },
+        {
+          "word": "Such as",
+          "usage": "Listing examples (NOT 'like' in academic writing)",
+          "example": "Developed countries, such as the UK and Germany, ..."
+        },
+        {
+          "word": "Namely",
+          "usage": "Specifically listing items",
+          "example": "Three factors were identified, namely cost, time, and quality."
+        },
+        {
+          "word": "In particular",
+          "usage": "Highlighting specific example",
+          "example": "Asian markets, in particular China, showed growth."
+        }
+      ]
+    },
+    {
+      "id": "sequencing",
+      "name": {
+        "en": "Sequencing",
+        "vi": "Trình tự"
+      },
+      "description": {
+        "en": "Used to show order of events or steps (especially for Process diagrams)",
+        "vi": "Dùng để chỉ thứ tự các bước (đặc biệt quan trọng cho dạng bài Process)"
+      },
+      "basic": ["First", "Second", "Next", "Then", "Finally"],
+      "advanced": [
+        {
+          "word": "Initially",
+          "usage": "At the beginning",
+          "example": "Initially, the raw materials are collected."
+        },
+        {
+          "word": "Subsequently",
+          "usage": "After that, following",
+          "example": "Subsequently, the mixture is heated."
+        },
+        {
+          "word": "Following this",
+          "usage": "After the previous step",
+          "example": "Following this, the product is packaged."
+        },
+        {
+          "word": "The next step involves",
+          "usage": "Introducing next stage",
+          "example": "The next step involves quality testing."
+        },
+        {
+          "word": "Prior to this",
+          "usage": "Before this step",
+          "example": "Prior to this, the ingredients are mixed."
+        },
+        {
+          "word": "The process commences with",
+          "usage": "Starting the process description",
+          "example": "The process commences with the extraction of raw materials."
+        },
+        {
+          "word": "The cycle culminates in",
+          "usage": "Ending of cyclical process",
+          "example": "The cycle culminates in the distribution of finished goods."
+        }
+      ]
+    },
+    {
+      "id": "clarification",
+      "name": {
+        "en": "Clarification",
+        "vi": "Giải thích"
+      },
+      "description": {
+        "en": "Used to explain or rephrase a complex idea",
+        "vi": "Dùng để làm rõ một ý tưởng trừu tượng hoặc phức tạp"
+      },
+      "basic": ["I mean"],
+      "advanced": [
+        {
+          "word": "That is to say",
+          "usage": "Rephrasing for clarity",
+          "example": "That is to say, the impact was minimal."
+        },
+        {
+          "word": "In other words",
+          "usage": "Simplifying explanation",
+          "example": "In other words, demand exceeded supply."
+        },
+        {
+          "word": "To put it another way",
+          "usage": "Alternative explanation",
+          "example": "To put it another way, costs outweighed benefits."
+        },
+        {
+          "word": "Specifically",
+          "usage": "Being more precise",
+          "example": "Specifically, the policy affected urban areas."
+        }
+      ]
+    },
+    {
+      "id": "emphasis",
+      "name": {
+        "en": "Emphasis",
+        "vi": "Nhấn mạnh"
+      },
+      "description": {
+        "en": "Used to highlight important data or arguments",
+        "vi": "Dùng để làm nổi bật dữ liệu quan trọng trong Task 1 hoặc luận điểm trong Task 2"
+      },
+      "basic": ["Especially"],
+      "advanced": [
+        {
+          "word": "Particularly",
+          "usage": "Highlighting specific item",
+          "example": "Particularly noteworthy is the rise in exports."
+        },
+        {
+          "word": "Notably",
+          "usage": "Drawing attention to important point",
+          "example": "Notably, the youngest group showed the highest growth."
+        },
+        {
+          "word": "In particular",
+          "usage": "Specific emphasis",
+          "example": "In particular, renewable energy saw significant investment."
+        },
+        {
+          "word": "Significantly",
+          "usage": "Emphasizing importance",
+          "example": "Significantly, this was the first recorded decline."
+        },
+        {
+          "word": "It is worth noting that",
+          "usage": "Introducing important observation",
+          "example": "It is worth noting that the trend reversed in 2015."
+        }
+      ]
+    },
+    {
+      "id": "concession",
+      "name": {
+        "en": "Concession",
+        "vi": "Nhượng bộ"
+      },
+      "description": {
+        "en": "Used to acknowledge opposing views before presenting your argument",
+        "vi": "Dùng để thừa nhận quan điểm đối lập trước khi đưa ra lập luận của mình"
+      },
+      "basic": ["Although", "Even though"],
+      "advanced": [
+        {
+          "word": "While it is true that",
+          "usage": "Acknowledging opponent's point",
+          "example": "While it is true that costs are high, the benefits outweigh them."
+        },
+        {
+          "word": "Admittedly",
+          "usage": "Conceding a point",
+          "example": "Admittedly, there are some drawbacks to this approach."
+        },
+        {
+          "word": "Despite",
+          "usage": "In spite of (+ noun/gerund)",
+          "example": "Despite the challenges, progress was made."
+        },
+        {
+          "word": "Notwithstanding",
+          "usage": "Formal despite",
+          "example": "Notwithstanding these concerns, the policy was implemented."
+        },
+        {
+          "word": "Granted that",
+          "usage": "Accepting a premise",
+          "example": "Granted that resources are limited, efficiency must improve."
+        }
+      ]
+    }
+  ]
+}

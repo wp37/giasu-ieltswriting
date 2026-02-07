@@ -1,0 +1,242 @@
+{
+  "toneComparison": {
+    "formal": {
+      "description": {
+        "en": "Use for: Unknown recipients, companies, officials, complaints",
+        "vi": "Dùng cho: Người không quen, công ty, cơ quan, khiếu nại"
+      },
+      "rules": [
+        "No contractions (I am, cannot, do not - NOT I'm, can't, don't)",
+        "No slang or colloquialisms",
+        "Use formal vocabulary",
+        "Use full forms of words"
+      ]
+    },
+    "semiFormat": {
+      "description": {
+        "en": "Use for: People you know professionally, teachers, landlords",
+        "vi": "Dùng cho: Người quen trong công việc, giáo viên, chủ nhà"
+      },
+      "rules": [
+        "Slightly less formal but still professional",
+        "Limited use of contractions acceptable",
+        "Polite but can be slightly personal"
+      ]
+    },
+    "informal": {
+      "description": {
+        "en": "Use for: Friends, family members, close acquaintances",
+        "vi": "Dùng cho: Bạn bè, người thân, người quen thân"
+      },
+      "rules": [
+        "Contractions are fine (I'm, can't, won't)",
+        "Casual language acceptable",
+        "Personal and friendly tone",
+        "Can use idioms and colloquialisms"
+      ]
+    }
+  },
+  "greetings": {
+    "formal": [
+      {"phrase": "Dear Sir or Madam,", "use": "When you don't know the recipient's name"},
+      {"phrase": "Dear Mr/Mrs/Ms [Surname],", "use": "When you know their name"},
+      {"phrase": "To Whom It May Concern,", "use": "Very formal, official letters"}
+    ],
+    "semiFormat": [
+      {"phrase": "Dear Mr/Mrs [Name],", "use": "Professional but known person"},
+      {"phrase": "Dear [First Name],", "use": "If you're on first-name basis"}
+    ],
+    "informal": [
+      {"phrase": "Dear [Name],", "use": "Friends and family"},
+      {"phrase": "Hi [Name],", "use": "Casual friends"},
+      {"phrase": "Hello [Name],", "use": "Friendly greeting"},
+      {"phrase": "Hey [Name],", "use": "Very casual, close friends"}
+    ]
+  },
+  "closings": {
+    "formal": [
+      {"phrase": "Yours faithfully,", "use": "When greeting was 'Dear Sir/Madam'"},
+      {"phrase": "Yours sincerely,", "use": "When you used their name in greeting"},
+      {"phrase": "Respectfully,", "use": "Very formal"}
+    ],
+    "semiFormat": [
+      {"phrase": "Best regards,", "use": "Professional but warm"},
+      {"phrase": "Kind regards,", "use": "Professional"},
+      {"phrase": "With best wishes,", "use": "Warm professional"}
+    ],
+    "informal": [
+      {"phrase": "Best wishes,", "use": "Friendly"},
+      {"phrase": "Take care,", "use": "Warm and caring"},
+      {"phrase": "All the best,", "use": "Friendly closing"},
+      {"phrase": "Love,", "use": "Close friends and family"},
+      {"phrase": "Cheers,", "use": "Very casual"},
+      {"phrase": "See you soon,", "use": "When expecting to meet"}
+    ]
+  },
+  "openingPhrases": {
+    "formal": [
+      {"phrase": "I am writing to inquire about...", "purpose": "Asking for information"},
+      {"phrase": "I am writing with regard to...", "purpose": "Referring to a matter"},
+      {"phrase": "I am writing to express my dissatisfaction with...", "purpose": "Complaint"},
+      {"phrase": "I am writing to apply for the position of...", "purpose": "Job application"},
+      {"phrase": "I am writing to request...", "purpose": "Making a request"},
+      {"phrase": "I would like to bring to your attention...", "purpose": "Raising an issue"}
+    ],
+    "semiFormat": [
+      {"phrase": "I am writing to let you know that...", "purpose": "Informing"},
+      {"phrase": "I wanted to ask about...", "purpose": "Making inquiry"},
+      {"phrase": "I hope this letter finds you well.", "purpose": "Polite opening"}
+    ],
+    "informal": [
+      {"phrase": "Hope you're doing well!", "purpose": "Friendly greeting"},
+      {"phrase": "How's it going?", "purpose": "Casual greeting"},
+      {"phrase": "Thanks for your letter.", "purpose": "Responding to a letter"},
+      {"phrase": "Sorry I haven't written for so long.", "purpose": "Apologizing for delay"},
+      {"phrase": "Great news!", "purpose": "Sharing good news"},
+      {"phrase": "I've got some exciting news to share.", "purpose": "Building anticipation"}
+    ]
+  },
+  "requestPhrases": {
+    "formal": [
+      "I would be grateful if you could...",
+      "I would like to request...",
+      "Could you please provide...",
+      "I would appreciate it if you could...",
+      "I kindly request that...",
+      "Would it be possible to..."
+    ],
+    "informal": [
+      "Can you...?",
+      "Could you...?",
+      "Would you mind...?",
+      "I was wondering if you could...",
+      "Do you think you could...?",
+      "Any chance you could...?"
+    ]
+  },
+  "apologyPhrases": {
+    "formal": [
+      "Please accept my sincere apologies for...",
+      "I apologize for any inconvenience caused.",
+      "I regret to inform you that...",
+      "I am sorry for the delay in...",
+      "I deeply regret that..."
+    ],
+    "informal": [
+      "Sorry about...",
+      "I'm really sorry for...",
+      "My bad!",
+      "I feel terrible about...",
+      "I owe you an apology for..."
+    ]
+  },
+  "letterTypes": {
+    "complaint": {
+      "name": {"en": "Letter of Complaint", "vi": "Thư khiếu nại"},
+      "tone": "formal",
+      "structure": [
+        "State the problem clearly",
+        "Explain when/where it occurred",
+        "Describe the impact on you",
+        "State what action you expect"
+      ],
+      "usefulPhrases": [
+        "I am writing to express my dissatisfaction with...",
+        "I wish to draw your attention to...",
+        "The service I received was unacceptable because...",
+        "I would like to receive a full refund/compensation.",
+        "I expect this matter to be resolved within...",
+        "I trust this matter will be dealt with promptly."
+      ]
+    },
+    "request": {
+      "name": {"en": "Letter of Request", "vi": "Thư yêu cầu"},
+      "tone": "formal/semi-formal",
+      "structure": [
+        "Explain why you are writing",
+        "State your request clearly",
+        "Give reasons for your request",
+        "Thank them in advance"
+      ],
+      "usefulPhrases": [
+        "I am writing to request...",
+        "I would be grateful if you could...",
+        "The reason for my request is...",
+        "I would appreciate your assistance with...",
+        "Thank you in advance for your help."
+      ]
+    },
+    "application": {
+      "name": {"en": "Job Application Letter", "vi": "Thư xin việc"},
+      "tone": "formal",
+      "structure": [
+        "State the position you're applying for",
+        "Highlight relevant qualifications/experience",
+        "Explain why you're interested",
+        "Request an interview"
+      ],
+      "usefulPhrases": [
+        "I am writing to apply for the position of...",
+        "I believe I am well-suited for this role because...",
+        "My qualifications include...",
+        "I have [X years] experience in...",
+        "I would welcome the opportunity to discuss...",
+        "I am available for an interview at your convenience."
+      ]
+    },
+    "apology": {
+      "name": {"en": "Letter of Apology", "vi": "Thư xin lỗi"},
+      "tone": "semi-formal",
+      "structure": [
+        "Acknowledge the mistake",
+        "Explain what happened (not excuse)",
+        "Express genuine regret",
+        "Offer a solution/remedy"
+      ],
+      "usefulPhrases": [
+        "I am writing to apologize for...",
+        "I realize that my actions caused...",
+        "Please accept my sincere apologies.",
+        "I understand how this affected you.",
+        "To make up for this, I would like to...",
+        "I assure you this will not happen again."
+      ]
+    },
+    "invitation": {
+      "name": {"en": "Letter of Invitation", "vi": "Thư mời"},
+      "tone": "informal/semi-formal",
+      "structure": [
+        "State the event/occasion",
+        "Provide details (date, time, place)",
+        "Express enthusiasm",
+        "Request confirmation"
+      ],
+      "usefulPhrases": [
+        "I'm writing to invite you to...",
+        "We're having a [event] and would love you to come!",
+        "The party will be held at... on...",
+        "It would be great if you could make it.",
+        "Please let me know if you can come.",
+        "Hope to see you there!"
+      ]
+    },
+    "personal": {
+      "name": {"en": "Personal Letter", "vi": "Thư cá nhân"},
+      "tone": "informal",
+      "structure": [
+        "Friendly opening",
+        "Share your news/respond to theirs",
+        "Ask questions about them",
+        "Warm closing"
+      ],
+      "usefulPhrases": [
+        "It was great to hear from you!",
+        "I've got so much to tell you!",
+        "How have you been?",
+        "Guess what happened to me!",
+        "I can't wait to see you.",
+        "Write back soon!"
+      ]
+    }
+  }
+}

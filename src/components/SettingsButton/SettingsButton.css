@@ -1,0 +1,205 @@
+/* =====================================================
+   SETTINGS BUTTON COMPONENT
+   ===================================================== */
+
+.settings-button-wrapper {
+    position: relative;
+}
+
+.settings-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.settings-button:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--glass-border-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.settings-button.needs-key {
+    border-color: rgba(239, 68, 68, 0.3);
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+
+    0%,
+    100% {
+        border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    50% {
+        border-color: rgba(239, 68, 68, 0.6);
+    }
+}
+
+.settings-icon {
+    transition: transform var(--transition-base);
+}
+
+.settings-icon.rotating {
+    transform: rotate(90deg);
+}
+
+.settings-text {
+    color: var(--text-primary);
+}
+
+.api-key-warning {
+    color: var(--error);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.125rem 0.5rem;
+    background: var(--error-bg);
+    border-radius: var(--radius-full);
+    animation: pulse 2s infinite;
+}
+
+.chevron {
+    color: var(--text-muted);
+    transition: transform var(--transition-fast);
+}
+
+.chevron.open {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.settings-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 280px;
+    background: var(--bg-elevated);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    z-index: var(--z-dropdown);
+    animation: fadeInDown 0.2s ease;
+}
+
+.dropdown-header {
+    padding: 1rem 1.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: var(--text-primary);
+    text-align: left;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.dropdown-item:hover {
+    background: var(--glass-bg);
+    transform: none;
+    box-shadow: none;
+}
+
+.dropdown-item:hover .dropdown-item-icon {
+    color: var(--primary-400);
+    transform: scale(1.1);
+}
+
+.dropdown-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--glass-bg);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.dropdown-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.dropdown-item-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.dropdown-item-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-dot.success {
+    background: var(--success);
+    box-shadow: 0 0 8px var(--success);
+}
+
+.status-dot.error {
+    background: var(--error);
+    box-shadow: 0 0 8px var(--error);
+    animation: pulse 1.5s infinite;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: var(--glass-border);
+    margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .settings-text {
+        display: none;
+    }
+
+    .api-key-warning {
+        display: none;
+    }
+
+    .settings-button {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .settings-dropdown {
+        right: -1rem;
+        min-width: 260px;
+    }
+}

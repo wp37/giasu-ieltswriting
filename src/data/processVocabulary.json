@@ -1,0 +1,104 @@
+{
+  "passiveVoice": {
+    "description": {
+      "en": "Process diagrams typically use passive voice because the focus is on the action, not who does it.",
+      "vi": "Quy trình thường dùng câu bị động vì trọng tâm là hành động, không phải người thực hiện."
+    },
+    "structures": [
+      {
+        "name": "Basic Passive",
+        "formula": "Object + is/are + Past Participle",
+        "example": "The corn is ground by the machine.",
+        "note": "Use present tense for general/natural processes"
+      },
+      {
+        "name": "Complex Passive",
+        "formula": "Once/After + Object + has been + Past Participle, it is + Past Participle",
+        "example": "Once the corn has been ground, it is packed into bags.",
+        "note": "Shows completed step before next step begins"
+      },
+      {
+        "name": "Passive with Modal",
+        "formula": "Object + can be/must be + Past Participle",
+        "example": "The mixture can be heated for 30 minutes.",
+        "note": "For optional or required steps"
+      }
+    ],
+    "commonVerbs": [
+      {"active": "collect", "passive": "is collected", "example": "Raw materials are collected."},
+      {"active": "transport", "passive": "is transported", "example": "The product is transported to the factory."},
+      {"active": "process", "passive": "is processed", "example": "The data is processed by computer."},
+      {"active": "filter", "passive": "is filtered", "example": "The water is filtered through sand."},
+      {"active": "heat", "passive": "is heated", "example": "The mixture is heated to 100°C."},
+      {"active": "cool", "passive": "is cooled", "example": "The solution is cooled overnight."},
+      {"active": "mix", "passive": "is mixed", "example": "The ingredients are mixed together."},
+      {"active": "dry", "passive": "is dried", "example": "The product is dried in the sun."},
+      {"active": "package", "passive": "is packaged", "example": "The goods are packaged for shipping."},
+      {"active": "store", "passive": "is stored", "example": "The final product is stored in warehouses."},
+      {"active": "distribute", "passive": "is distributed", "example": "Items are distributed to retailers."}
+    ]
+  },
+  "sequencers": {
+    "beginning": [
+      {"phrase": "The process begins with", "example": "The process begins with the collection of raw materials."},
+      {"phrase": "The process commences with", "example": "The process commences with harvesting."},
+      {"phrase": "Initially", "example": "Initially, water is pumped from the reservoir."},
+      {"phrase": "In the first stage", "example": "In the first stage, ingredients are gathered."},
+      {"phrase": "At the outset", "example": "At the outset, materials are inspected."},
+      {"phrase": "First of all", "example": "First of all, the raw materials are cleaned."}
+    ],
+    "middle": [
+      {"phrase": "Subsequently", "example": "Subsequently, the mixture is heated."},
+      {"phrase": "Following this", "example": "Following this, the product is cooled."},
+      {"phrase": "The next step involves", "example": "The next step involves filtering the liquid."},
+      {"phrase": "After that", "example": "After that, it is left to dry."},
+      {"phrase": "Then", "example": "Then, the items are sorted."},
+      {"phrase": "At this stage", "example": "At this stage, quality checks are conducted."},
+      {"phrase": "Once this is done", "example": "Once this is done, the material is shaped."},
+      {"phrase": "Having been [past participle]", "example": "Having been processed, the product moves to packaging."}
+    ],
+    "end": [
+      {"phrase": "Finally", "example": "Finally, the goods are shipped to retailers."},
+      {"phrase": "The final stage involves", "example": "The final stage involves distribution."},
+      {"phrase": "The process culminates in", "example": "The process culminates in the sale of products."},
+      {"phrase": "The final output is", "example": "The final output is packaged food products."},
+      {"phrase": "At the end of the process", "example": "At the end of the process, waste is recycled."},
+      {"phrase": "Ultimately", "example": "Ultimately, the finished goods reach consumers."}
+    ],
+    "cyclical": [
+      {"phrase": "The cycle then repeats", "example": "The cycle then repeats from the beginning."},
+      {"phrase": "is channeled back to", "example": "The water is channeled back to the reservoir."},
+      {"phrase": "returns to the start", "example": "The process returns to the start."},
+      {"phrase": "This cycle continues", "example": "This cycle continues indefinitely."}
+    ]
+  },
+  "overviewPhrases": [
+    "The diagram illustrates the process of [noun phrase].",
+    "The diagram shows how [noun] is produced/made/manufactured.",
+    "Overall, there are [number] main stages in the process.",
+    "The process consists of [number] distinct stages, beginning with [X] and ending with [Y].",
+    "It is a cyclical/linear process involving [number] key steps."
+  ],
+  "usefulPhrases": [
+    "At this point",
+    "During this stage",
+    "Throughout the process",
+    "As a result of this",
+    "By means of",
+    "Through the use of",
+    "With the help of",
+    "Using [noun/equipment]"
+  ],
+  "naturalProcessVocab": [
+    {"word": "evaporates", "example": "Water evaporates from the ocean."},
+    {"word": "condenses", "example": "Vapor condenses into clouds."},
+    {"word": "precipitates", "example": "Rain precipitates from clouds."},
+    {"word": "flows", "example": "Water flows downhill."},
+    {"word": "seeps", "example": "Water seeps into the ground."},
+    {"word": "absorbs", "example": "Soil absorbs moisture."},
+    {"word": "releases", "example": "Plants release oxygen."},
+    {"word": "forms", "example": "Ice forms on the surface."},
+    {"word": "melts", "example": "Snow melts in spring."},
+    {"word": "decomposes", "example": "Organic matter decomposes over time."}
+  ]
+}

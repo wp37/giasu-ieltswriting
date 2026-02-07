@@ -1,0 +1,255 @@
+{
+  "task1Academic": {
+    "lineGraph": [
+      {
+        "id": "line-1",
+        "title": "Internet Usage",
+        "description": "The graph below shows the percentage of people using the internet in three different countries from 2000 to 2020.",
+        "image": null,
+        "difficulty": "medium"
+      },
+      {
+        "id": "line-2",
+        "title": "Population Growth",
+        "description": "The line graph illustrates population changes in four cities from 1950 to 2020.",
+        "image": null,
+        "difficulty": "medium"
+      },
+      {
+        "id": "line-3",
+        "title": "Energy Consumption",
+        "description": "The graph shows the consumption of renewable energy in the USA, China, and Germany between 2010 and 2022.",
+        "image": null,
+        "difficulty": "hard"
+      }
+    ],
+    "barChart": [
+      {
+        "id": "bar-1",
+        "title": "Water Usage",
+        "description": "The chart below shows water consumption in different sectors in five countries.",
+        "image": null,
+        "difficulty": "medium"
+      },
+      {
+        "id": "bar-2",
+        "title": "Transport Preferences",
+        "description": "The bar chart shows the main methods of transport used by people in four European cities.",
+        "image": null,
+        "difficulty": "easy"
+      }
+    ],
+    "pieChart": [
+      {
+        "id": "pie-1",
+        "title": "Household Expenditure",
+        "description": "The pie charts below show household expenditure in a country in 1990 and 2020.",
+        "image": null,
+        "difficulty": "medium"
+      },
+      {
+        "id": "pie-2",
+        "title": "Energy Sources",
+        "description": "The charts show the sources of electricity generation in two countries.",
+        "image": null,
+        "difficulty": "medium"
+      }
+    ],
+    "table": [
+      {
+        "id": "table-1",
+        "title": "University Statistics",
+        "description": "The table shows the number of students enrolled in different faculties at a university in 2015 and 2020.",
+        "image": null,
+        "difficulty": "medium"
+      }
+    ],
+    "map": [
+      {
+        "id": "map-1",
+        "title": "Town Development",
+        "description": "The maps below show the changes that took place in a small town between 1990 and 2020.",
+        "image": null,
+        "difficulty": "medium"
+      },
+      {
+        "id": "map-2",
+        "title": "Island Resort",
+        "description": "The diagrams show the development of an island into a tourist resort over a 20-year period.",
+        "image": null,
+        "difficulty": "hard"
+      }
+    ],
+    "process": [
+      {
+        "id": "process-1",
+        "title": "Chocolate Production",
+        "description": "The diagram shows the process of producing chocolate from cocoa beans.",
+        "image": null,
+        "difficulty": "medium"
+      },
+      {
+        "id": "process-2",
+        "title": "Water Cycle",
+        "description": "The diagram illustrates the water cycle in nature.",
+        "image": null,
+        "difficulty": "easy"
+      },
+      {
+        "id": "process-3",
+        "title": "Recycling Process",
+        "description": "The diagram shows how plastic bottles are recycled.",
+        "image": null,
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "task1GT": {
+    "complaint": [
+      {
+        "id": "complaint-1",
+        "title": "Hotel Service",
+        "description": "You recently stayed at a hotel and were dissatisfied with the service. Write a letter to the hotel manager.",
+        "bulletPoints": ["Describe your stay", "Explain what the problems were", "Say what action you would like the hotel to take"],
+        "tone": "formal"
+      },
+      {
+        "id": "complaint-2",
+        "title": "Faulty Product",
+        "description": "You bought a new appliance but it does not work properly. Write a letter to the store manager.",
+        "bulletPoints": ["Describe what you bought", "Explain the problem", "Say what you want them to do"],
+        "tone": "formal"
+      }
+    ],
+    "request": [
+      {
+        "id": "request-1",
+        "title": "Time Off Work",
+        "description": "You need to take time off work for personal reasons. Write a letter to your manager.",
+        "bulletPoints": ["Explain why you need time off", "Give details of when and how long", "Suggest how your work could be covered"],
+        "tone": "semi-formal"
+      },
+      {
+        "id": "request-2",
+        "title": "Information Request",
+        "description": "You are interested in taking a course at a local college. Write a letter to the college.",
+        "bulletPoints": ["Explain which course you are interested in", "Ask for information about the course", "Ask about enrollment procedures"],
+        "tone": "formal"
+      }
+    ],
+    "application": [
+      {
+        "id": "application-1",
+        "title": "Part-time Job",
+        "description": "You saw an advertisement for a part-time job at a local restaurant. Write a letter applying for the job.",
+        "bulletPoints": ["Explain why you are interested", "Describe your relevant experience", "Say when you are available"],
+        "tone": "formal"
+      }
+    ],
+    "apology": [
+      {
+        "id": "apology-1",
+        "title": "Missed Meeting",
+        "description": "You were unable to attend a meeting with your friend. Write a letter apologizing.",
+        "bulletPoints": ["Apologize for missing the meeting", "Explain why you couldn't attend", "Suggest another time to meet"],
+        "tone": "informal"
+      }
+    ],
+    "invitation": [
+      {
+        "id": "invitation-1",
+        "title": "Birthday Party",
+        "description": "You are organizing a birthday party. Write a letter to invite a friend who lives in another city.",
+        "bulletPoints": ["Invite your friend to the party", "Give details of the party", "Suggest accommodation arrangements"],
+        "tone": "informal"
+      }
+    ],
+    "personal": [
+      {
+        "id": "personal-1",
+        "title": "New Job",
+        "description": "You have recently started a new job. Write a letter to a friend telling them about it.",
+        "bulletPoints": ["Explain what the job is", "Describe what you do", "Say how you feel about it"],
+        "tone": "informal"
+      }
+    ]
+  },
+  "task2": {
+    "opinion": [
+      {
+        "id": "opinion-1",
+        "title": "Online Education",
+        "question": "Some people believe that online education will eventually replace traditional classroom learning. To what extent do you agree or disagree?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "opinion-2",
+        "title": "Government Spending",
+        "question": "Governments should spend money on railways rather than roads. To what extent do you agree or disagree?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "opinion-3",
+        "title": "Working from Home",
+        "question": "In the future, more and more people will work from home. Do you think this is a positive or negative development?",
+        "difficulty": "easy"
+      }
+    ],
+    "discussion": [
+      {
+        "id": "discussion-1",
+        "title": "University Education",
+        "question": "Some people think that all university students should study whatever they like. Others believe that they should only be allowed to study subjects that will be useful in the future, such as those related to science and technology. Discuss both views and give your own opinion.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "discussion-2",
+        "title": "Animal Testing",
+        "question": "Some people think that animal testing is necessary for medical research, while others believe it is cruel and should be banned. Discuss both views and give your opinion.",
+        "difficulty": "hard"
+      }
+    ],
+    "problemSolution": [
+      {
+        "id": "problem-1",
+        "title": "Traffic Congestion",
+        "question": "Traffic congestion is a growing problem in many cities. What are the causes of this problem and what measures could be taken to reduce traffic in cities?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "problem-2",
+        "title": "Youth Unemployment",
+        "question": "In many countries, young people are finding it increasingly difficult to find jobs. What are the causes of this problem and what solutions can you suggest?",
+        "difficulty": "medium"
+      }
+    ],
+    "advantagesDisadvantages": [
+      {
+        "id": "advdis-1",
+        "title": "Social Media",
+        "question": "What are the advantages and disadvantages of social media for young people?",
+        "difficulty": "easy"
+      },
+      {
+        "id": "advdis-2",
+        "title": "Globalization",
+        "question": "Globalization has both advantages and disadvantages. Discuss and give your opinion.",
+        "difficulty": "hard"
+      }
+    ],
+    "twoPart": [
+      {
+        "id": "twopart-1",
+        "title": "Happiness",
+        "question": "Many people today are unhappy despite being wealthier than ever before. Why do you think this is? What can be done to improve people's happiness?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "twopart-2",
+        "title": "Tourism",
+        "question": "Tourism has increased significantly in recent years. Why is this the case? Is this a positive or negative development?",
+        "difficulty": "medium"
+      }
+    ]
+  }
+}
